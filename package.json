@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-blog",
+  "name": "affordable-apps",
   "version": "1.0.0",
   "description": "Opinionated starter template to get started with a blog",
   "keywords": [
@@ -7,17 +7,17 @@
     "gatsby-starter",
     "storybook"
   ],
-  "homepage": "https://github.com/yehjxraymond/gatsby-blog",
+  "homepage": "affordableapps.netlify.app",
   "license": "MIT",
   "author": {
-    "name": "Raymond Yeh",
-    "url": "https://geek.sg"
+    "name": "Kevin Johar",
+    "url": "kevinjohar.com"
   },
   "files": [],
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yehjxraymond/gatsby-blog"
+    "url": "https://github.com/kevingilotra/affordable-apps"
   },
   "scripts": {
     "dev": "npm-run-all -p dev:*",
