@@ -30,15 +30,15 @@ export const NotFound: FunctionComponent = () => {
       Message: message,
     };
     // This POSTs your encoded form to Netlify with the required headers (for text; headers will be different for POSTing a file) and, on success, redirects to the custom success page using Gatsby's `navigate` helper function that we imported at the top
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(createFormDataObj(data)).toString(),
-    })
-      .then(() => navigate("/contact-success"))
-      .catch((error) => alert(error));
-    // This is required to prevent the default onSubmit behavior
-    e.preventDefault();
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: new URLSearchParams(createFormDataObj(data)).toString(),
+    // })
+    //   .then(() => navigate("/contact-success"))
+    //   .catch((error) => alert(error));
+    // // This is required to prevent the default onSubmit behavior
+    // e.preventDefault();
   };
 
   return (
@@ -65,8 +65,7 @@ export const NotFound: FunctionComponent = () => {
                 onSubmit={handleSubmit}
                 action="/contact-success"
                 method="POST"
-                className="mt-9 grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8"
-              >
+                className="mt-9 grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8">
                 <div>
                   <label
                     htmlFor="first_name"

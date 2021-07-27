@@ -5,7 +5,7 @@ import { Footer } from "./footer";
 const story = storiesOf("Components|Layout", module);
 
 const data: Footer = {
-  copyrightOwner: "Geek SG",
+  copyrightOwner: "Kevin Johar",
   facebook: "https://geek.sg/",
   instagram: "https://geek.sg/",
   twitter: "https://geek.sg/",
