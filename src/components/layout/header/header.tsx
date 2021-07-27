@@ -125,7 +125,7 @@ export const MobileFlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
             href={href}
             className="-m-3 pl-6 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
           >
-            <div className="text-base leading-6 font-medium text-gray-900">
+            <div className="text-base leading-6 font-light text-gray-900">
               {text}
             </div>
           </a>
