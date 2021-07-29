@@ -1,7 +1,8 @@
-const siteName = "Sample Blog";
-const siteShortName = "Sample Blog";
-const siteUrl = "https://geek.sg/";
-const siteDescription = "Sample blog template";
+const siteName = "Affordable Apps";
+const siteShortName = "Affordable Apps";
+const siteUrl = "https://affordableapps.netlify.app";
+const siteDescription =
+  "Affordable application services for students by a student";
 const siteKeyword = "";
 const siteLogo = "logo.png";
 const siteLogoFolder = `static/${siteLogo}`;

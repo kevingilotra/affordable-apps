@@ -8,6 +8,10 @@ export interface Footer {
   github?: string;
   dribble?: string;
   linkedin?: string;
+  createdBy: {
+    name: string,
+    link: string
+  },
 }
 
 export const Footer: FunctionComponent<Footer> = ({
@@ -18,6 +22,7 @@ export const Footer: FunctionComponent<Footer> = ({
   github,
   dribble,
   linkedin,
+  createdBy
 }) => {
   return (
     <div className="bg-white">
@@ -107,6 +112,9 @@ export const Footer: FunctionComponent<Footer> = ({
         <div className="mt-8 md:mt-0 md:order-1">
           <p className="text-center text-base leading-6 text-gray-400">
             © {new Date().getFullYear()} {copyrightOwner}. All rights reserved.
+          </p>
+          <p className="text-xs text-gray-400">
+            Website created by <a href={createdBy?.link}>{createdBy?.name}</a>
           </p>
         </div>
       </div>

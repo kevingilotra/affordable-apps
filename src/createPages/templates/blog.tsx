@@ -94,11 +94,11 @@ interface QueryData {
   };
 }
 
-interface Home {
+interface Blog {
   data: QueryData;
 }
 
-const Home: FunctionComponent<Home> = ({ data }) => {
+const Blog: FunctionComponent<Blog> = ({ data }) => {
   const mapPostData = ({ node }: { node: Post["node"] }) => ({
     title: node.frontmatter.title,
     summary: node.frontmatter.description,
@@ -114,7 +114,7 @@ const Home: FunctionComponent<Home> = ({ data }) => {
   const recentPostData: PostSnippet[] = data.recentPosts.edges.map(mapPostData);
   return (
     <>
-      <SEO title="Home" image="/logo.png"/>
+      <SEO title="Blog" image="/logo.png" />
       <Layout>
         <FeaturePosts featurePosts={featuredPostData} />
         <RecentPosts recentPosts={recentPostData} />
@@ -124,4 +124,4 @@ const Home: FunctionComponent<Home> = ({ data }) => {
   );
 };
 
-export default Home;
+export default Blog;
