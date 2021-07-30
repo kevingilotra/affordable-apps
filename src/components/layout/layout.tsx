@@ -45,7 +45,7 @@ const menuItems: MenuItem[] = [
     label: "Services",
     dropdownItems: [
       getServiceDropdownItem(
-        "FREE Consultation",
+        "15-Min FREE Consultation",
         "Get a free 15-minute consultation with me",
         "/services/consultation"
       ),
