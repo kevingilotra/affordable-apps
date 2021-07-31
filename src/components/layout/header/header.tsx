@@ -1,4 +1,4 @@
-import React, { useState, FunctionComponent } from "react";
+import React, { useState, FunctionComponent, useEffect } from "react";
 
 export interface DropdownItem {
   label: string;
@@ -32,16 +32,18 @@ export const FlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
   const toggleIsOpen = () => setIsOpen(!isOpen);
   const toggleOpenOff = () => setIsOpen(false);
 
-  document.body.addEventListener(
-    "click",
-    () => {
-      console.log("Is Open: ", isOpen);
-      if (isOpen) {
-        toggleOpenOff();
-      }
-    },
-    true
-  );
+  useEffect(() => {
+    document.body.addEventListener(
+      "click",
+      () => {
+        // console.log("Is Open: ", isOpen);
+        if (isOpen) {
+          toggleOpenOff();
+        }
+      },
+      true
+    );
+  });
 
   /* Item active: "text-gray-900", Item inactive: "text-gray-500" */
   return (
@@ -163,9 +165,7 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="lg:w-0 lg:flex-1">
             <div className="flex">
-              <a href="/">
-                {logo}
-              </a>
+              <a href="/">{logo}</a>
             </div>
           </div>
           <div className="-mr-2 -my-2 md:hidden">

@@ -38,8 +38,8 @@ const menuItems: MenuItem[] = [
     href: "/",
   },
   {
-    label: "Blog",
-    href: "/blog/",
+    label: "About Me",
+    href: "/about/",
   },
   {
     label: "Services",
@@ -82,12 +82,12 @@ const menuItems: MenuItem[] = [
     ],
   },
   {
-    label: "About Me",
-    href: "/about/",
-  },
-  {
     label: "Contact",
     href: "/contact/",
+  },
+  {
+    label: "Blog",
+    href: "/blog/",
   },
 ];
 
