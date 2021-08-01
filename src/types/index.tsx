@@ -29,3 +29,11 @@ export interface BlogPost {
   tags: string[];
   content: JSX.Element;
 }
+
+export interface Testimonial {
+  name: string;
+  testimonial: string;
+  publishedDate: Date;
+  image?: FluidObject;
+  imageAlt?: string;
+}

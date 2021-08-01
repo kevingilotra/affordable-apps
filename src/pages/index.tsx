@@ -1,11 +1,22 @@
 import React, { FunctionComponent } from "react";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
+import { Testimonials } from "../components/testimonials/testimonials";
 
 export interface Service {
   title: string;
   description?: string;
   href: string;
+}
+
+interface QueryData {
+  testimonials: {
+    edges: Testimonials[];
+  };
+}
+
+interface Index {
+  data: QueryData;
 }
 
 const hero = {
@@ -75,7 +86,7 @@ const services = [
 export const AboutMe: FunctionComponent = () => {
   return (
     <div className="mb-10">
-      <h3 className="text-3xl mb-5 font-bold">About Me</h3>
+      <h2 className="text-3xl mb-5 font-bold">About Me</h2>
       <p>{aboutMe?.text}</p>
     </div>
   );
@@ -84,9 +95,9 @@ export const AboutMe: FunctionComponent = () => {
 export const Services: FunctionComponent = () => {
   return (
     <div className="mb-10">
-      <h3 className="text-3xl mb-5 font-bold">
+      <h2 className="text-3xl mb-5 font-bold">
         What do you need help with?
-      </h3>
+      </h2>
       <div
         className="grid gap-10 mx-10"
         style={{
@@ -94,8 +105,8 @@ export const Services: FunctionComponent = () => {
         }}
       >
         {services.map((service, index) => (
-          <a href={service?.href} key={index} className="hover:bg-blue-500 hover:text-white">
-            <div className="border-4 border-blue-500 p-5 rounded-sm flex flex-col justify-center items-center">
+          <a href={service?.href} key={index} className="p-5 rounded-lg shadow-lg hover:bg-blue-500 hover:text-white">
+            <div className="flex flex-col justify-center items-center">
               <p className="font-bold">{service.title}</p>
               <p className="text-xs">{service?.description}</p>
             </div>
@@ -106,7 +117,7 @@ export const Services: FunctionComponent = () => {
   );
 };
 
-const Index: FunctionComponent = () => {
+const Index: FunctionComponent = ({ data }) => {
   return (
     <>
       <SEO title="Home" image="/logo.png" />
@@ -127,11 +138,7 @@ const Index: FunctionComponent = () => {
         </div>
         <AboutMe />
         <Services />
-        <div>
-          <h3 className="text-3xl mb-5 font-bold">
-            Testimonials
-          </h3>
-        </div>
+        <Testimonials testimonials={[{name: "Rebecca", testimonial: "I love it", publishedDate: new Date()}]} />
       </Layout>
     </>
   );
