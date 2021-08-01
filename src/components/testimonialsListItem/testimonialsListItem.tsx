@@ -25,7 +25,7 @@ export const TestimonialsListItem: FunctionComponent<Testimonial> = ({
       <div className="w-full">
         <p className="font-bold">{name}</p>
         <p className="italic">{testimonial}</p>
-        <p className="relative left-10/12">{publishedDate.toDateString()}</p>
+        <p className="relative font-light left-10/12">{publishedDate.toDateString()}</p>
       </div>
     </div>
   );

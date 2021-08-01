@@ -27,13 +27,13 @@ collections:
       - {label: "Image Caption", name: "imgAlt", widget: string}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "testimonials"
-    label: "Testimonials"
+  - name: "testimonial"
+    label: "Testimonial"
     folder: "content/testimonials"
     create: true
     fields:
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Body", name: "title", widget: "string"}
+      - {label: "Body", name: "title", widget: "markdown"}
       - {label: "Publish Date", name: "publishDate", widget: "datetime"}
       - {label: "Image", name: "img", widget: image}
       - {label: "Image Alt Text", name: "imgAlt", widget: string}

@@ -95,9 +95,7 @@ export const AboutMe: FunctionComponent = () => {
 export const Services: FunctionComponent = () => {
   return (
     <div className="mb-10">
-      <h2 className="text-3xl mb-5 font-bold">
-        What do you need help with?
-      </h2>
+      <h2 className="text-3xl mb-5 font-bold">What do you need help with?</h2>
       <div
         className="grid gap-10 mx-10"
         style={{
@@ -138,7 +136,15 @@ const Index: FunctionComponent = ({ data }) => {
         </div>
         <AboutMe />
         <Services />
-        <Testimonials testimonials={[{name: "Rebecca", testimonial: "I love it", publishedDate: new Date()}]} />
+        <Testimonials
+          testimonials={[
+            {
+              name: "Rebecca",
+              testimonial: "I love it",
+              publishedDate: new Date(),
+            },
+          ]}
+        />
       </Layout>
     </>
   );
