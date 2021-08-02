@@ -32,8 +32,8 @@ export interface BlogPost {
 
 export interface Testimonial {
   name: string;
-  testimonial: string;
+  body: string;
   publishedDate: Date;
-  image?: FluidObject;
-  imageAlt?: string;
+  img?: FluidObject;
+  imgAlt?: string;
 }

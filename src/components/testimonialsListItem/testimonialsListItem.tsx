@@ -7,25 +7,29 @@ export interface TestimonialsListItem {
 }
 
 export const TestimonialsListItem: FunctionComponent<Testimonial> = ({
-  testimonial,
   name,
+  body,
   publishedDate,
-  image,
-  imageAlt,
+  img,
+  imgAlt,
 }) => {
   return (
     <div className="rounded-lg shadow-lg flex flex-row p-5 mb-8">
-      <div>
-        <Image
-          fluid={image}
-          alt={imageAlt}
-          className="h-48 w-full sm:w-48 xl:h-52 xl:w-52 object-cover rounded-sm"
-        />
+      <div className="mr-10">
+        {img ? (
+          <Image
+            fluid={img}
+            alt={imgAlt}
+            className="h-48 w-full sm:w-48 xl:h-52 xl:w-52 object-cover rounded-sm"
+          />
+        ) : null}
       </div>
-      <div className="w-full">
-        <p className="font-bold">{name}</p>
-        <p className="italic">{testimonial}</p>
-        <p className="relative font-light left-10/12">{publishedDate.toDateString()}</p>
+      <div className="w-full flex flex-col justify-between">
+        <div>
+          <p className="font-bold">{name}</p>
+          <p className="italic">{body}</p>
+        </div>
+        <p className="font-light">{publishedDate.toDateString()}</p>
       </div>
     </div>
   );

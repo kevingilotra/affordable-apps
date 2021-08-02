@@ -1,7 +1,39 @@
 import React, { FunctionComponent } from "react";
+import { graphql } from "gatsby";
+import { FluidObject } from "gatsby-image";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
-import { Testimonials } from "../components/testimonials/testimonials";
+import { Testimonials } from "../createPages/templates/testimonial";
+import { Testimonial } from "../types";
+
+export const pageQuery = graphql`
+  {
+    testimonials: allMarkdownRemark(
+      limit: 20
+      sort: { fields: [frontmatter___publishedDate], order: DESC }
+      filter: { frontmatter: { template: { eq: "testimonial" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            name
+            body
+            imgAlt
+            publishedDate
+            img {
+              childImageSharp {
+                fluid(maxWidth: 2400, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export interface Service {
   title: string;
@@ -9,9 +41,22 @@ export interface Service {
   href: string;
 }
 
+interface TestimonialData {
+  node: {
+    id: string;
+    frontmatter: {
+      name: string;
+      body: string;
+      publishedDate: string;
+      img: { childImageSharp: { fluid: FluidObject } };
+      imgAlt: string;
+    };
+  };
+}
+
 interface QueryData {
   testimonials: {
-    edges: Testimonials[];
+    edges: TestimonialData[];
   };
 }
 
@@ -31,7 +76,8 @@ const hero = {
 };
 
 const aboutMe = {
-  text: "My name is Kevin Gilotra, I was born and raised in Mississauga, ON for " +
+  text:
+    "My name is Kevin Gilotra, I was born and raised in Mississauga, ON for " +
     "the first two decades of my life after which I decided to pursue medical " +
     "school at Stony Brook University in Long Island, NY. I completed my " +
     "undergraduate degree in kinesiology at McMaster University as a part of the " +
@@ -103,7 +149,11 @@ export const Services: FunctionComponent = () => {
         }}
       >
         {services.map((service, index) => (
-          <a href={service?.href} key={index} className="p-5 rounded-lg shadow-lg hover:bg-blue-500 hover:text-white">
+          <a
+            href={service?.href}
+            key={index}
+            className="p-5 rounded-lg shadow-lg hover:bg-blue-500 hover:text-white"
+          >
             <div className="flex flex-col justify-center items-center">
               <p className="font-bold">{service.title}</p>
               <p className="text-xs">{service?.description}</p>
@@ -115,7 +165,21 @@ export const Services: FunctionComponent = () => {
   );
 };
 
-const Index: FunctionComponent = ({ data }) => {
+const Index: FunctionComponent<Index> = ({ data }) => {
+  const mapTestimonialData = ({ node }: { node: TestimonialData["node"] }) => ({
+    name: node.frontmatter.name,
+    body: node.frontmatter.body,
+    img: node.frontmatter.img.childImageSharp.fluid,
+    imgAlt: node.frontmatter.imgAlt,
+    publishedDate: new Date(node.frontmatter.publishedDate),
+  });
+
+  const testimonials: Testimonial[] = data.testimonials.edges.map(
+    mapTestimonialData
+  );
+
+  console.log("Testimonials: ", testimonials);
+
   return (
     <>
       <SEO title="Home" image="/logo.png" />
@@ -128,7 +192,10 @@ const Index: FunctionComponent = ({ data }) => {
               alt="Laptop and Stethoscope"
             />
           </div>
-          <div className="flex flex-col md:mb-12 mb-12 md:ml-6 font-bold" style={{ fontSize: "1.25rem" }}>
+          <div
+            className="flex flex-col md:mb-12 mb-12 md:ml-6 font-bold"
+            style={{ fontSize: "1.25rem" }}
+          >
             <p className="mb-10">{hero?.text1}</p>
             <p className="mb-10">{hero?.text2}</p>
             <p>{hero?.text3}</p>
@@ -136,15 +203,7 @@ const Index: FunctionComponent = ({ data }) => {
         </div>
         <AboutMe />
         <Services />
-        <Testimonials
-          testimonials={[
-            {
-              name: "Rebecca",
-              testimonial: "I love it",
-              publishedDate: new Date(),
-            },
-          ]}
-        />
+        <Testimonials testimonials={testimonials} />
       </Layout>
     </>
   );

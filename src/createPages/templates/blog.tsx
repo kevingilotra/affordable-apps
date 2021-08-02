@@ -13,7 +13,9 @@ export const pageQuery = graphql`
     featuredPosts: allMarkdownRemark(
       limit: 4
       sort: { fields: [frontmatter___publishedDate], order: DESC }
-      filter: { frontmatter: { featured: { eq: true } } }
+      filter: {
+        frontmatter: { featured: { eq: true }, template: { eq: "blog-post" } }
+      }
     ) {
       edges {
         node {

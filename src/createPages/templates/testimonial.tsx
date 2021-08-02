@@ -2,11 +2,11 @@ import React, { FunctionComponent } from "react";
 import { Testimonial } from "../../types";
 import { TestimonialsListItem } from "../../components/testimonialsListItem/testimonialsListItem";
 
-export interface Testimonials {
+export interface TestimonialPage {
   testimonials: Testimonial[];
 }
 
-export const Testimonials: FunctionComponent<Testimonials> = ({
+export const Testimonials: FunctionComponent<TestimonialPage> = ({
   testimonials,
 }) => {
   return (
