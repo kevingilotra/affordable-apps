@@ -28,13 +28,14 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "testimonial"
+    identifier_field: "name"
     label: "Testimonial"
     folder: "content/testimonials"
     create: true
     fields:
       - {label: "Template", name: "template", widget: "hidden", default: "testimonial"}
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Body", name: "title", widget: "markdown"}
-      - {label: "Publish Date", name: "publishDate", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Published Date", name: "publishedDate", widget: "datetime"}
       - {label: "Image", name: "img", widget: image, optional: true}
       - {label: "Image Alt Text", name: "imgAlt", widget: string, optional: true}

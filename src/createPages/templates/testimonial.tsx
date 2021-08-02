@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { Testimonial } from "../../types";
-import { TestimonialsListItem } from "../testimonialsListItem/testimonialsListItem";
+import { TestimonialsListItem } from "../../components/testimonialsListItem/testimonialsListItem";
 
 export interface Testimonials {
   testimonials: Testimonial[];
