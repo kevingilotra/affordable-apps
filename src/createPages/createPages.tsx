@@ -64,7 +64,10 @@ export const createPages = async ({
       id,
       frontmatter: { tags },
     } = edge.node;
-    tags?.forEach((tag) => tagsCollection.add(tag));
+
+    if (!!tags && tags.length > 0) {
+      tags.forEach((tag) => tagsCollection.add(tag));
+    }
     createPage({
       path: edge.node.fields.slug,
       component: path.resolve(
