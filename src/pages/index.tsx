@@ -19,6 +19,7 @@ export const pageQuery = graphql`
           frontmatter {
             name
             body
+            rating
             imgAlt
             publishedDate
             img {
@@ -47,6 +48,7 @@ interface TestimonialData {
     frontmatter: {
       name: string;
       body: string;
+      rating: number;
       publishedDate: string;
       img: { childImageSharp: { fluid: FluidObject } };
       imgAlt: string;
@@ -166,11 +168,13 @@ export const Services: FunctionComponent = () => {
 };
 
 const Index: FunctionComponent<Index> = ({ data }) => {
+
+  console.log("Data: ", data);
   const mapTestimonialData = ({ node }: { node: TestimonialData["node"] }) => ({
     name: node.frontmatter.name,
     body: node.frontmatter.body,
-    img: node.frontmatter.img.childImageSharp.fluid,
-    imgAlt: node.frontmatter.imgAlt,
+    img: node?.frontmatter?.img?.childImageSharp?.fluid,
+    imgAlt: node?.frontmatter?.imgAlt,
     publishedDate: new Date(node.frontmatter.publishedDate),
   });
 

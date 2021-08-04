@@ -34,6 +34,7 @@ export interface Testimonial {
   name: string;
   body: string;
   publishedDate: Date;
+  rating: number;
   img?: FluidObject;
   imgAlt?: string;
 }

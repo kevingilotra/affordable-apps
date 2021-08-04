@@ -9,6 +9,7 @@ export interface TestimonialsListItem {
 export const TestimonialsListItem: FunctionComponent<Testimonial> = ({
   name,
   body,
+  rating,
   publishedDate,
   img,
   imgAlt,
@@ -25,11 +26,11 @@ export const TestimonialsListItem: FunctionComponent<Testimonial> = ({
         ) : null}
       </div>
       <div className="w-full flex flex-col justify-between">
-        <div>
+          <p className="italic mb-3">{body}</p>
+        <div className="flex flex-row justify-between">
           <p className="font-bold">{name}</p>
-          <p className="italic">{body}</p>
+          <p className="font-light">{publishedDate.toDateString()}</p>
         </div>
-        <p className="font-light">{publishedDate.toDateString()}</p>
       </div>
     </div>
   );
