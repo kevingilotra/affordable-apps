@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import { FluidObject } from "gatsby-image";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
-import { Testimonials } from "../createPages/templates/testimonial";
+import { Testimonials } from "../createPages/templates/testimonials";
 import { Testimonial } from "../types";
 
 export const pageQuery = graphql`
