@@ -11,7 +11,7 @@ export const pageQuery = graphql`
     testimonials: allMarkdownRemark(
       limit: 20
       sort: { fields: [frontmatter___publishedDate], order: DESC }
-      filter: { frontmatter: { template: { eq: "testimonial" } } }
+      filter: { frontmatter: { template: { eq: "testimonials" } } }
     ) {
       edges {
         node {
@@ -131,9 +131,33 @@ const services = [
   },
 ];
 
+export const Hero: FunctionComponent = () => {
+ return (
+   <div className="bg-blue-400 py-15 px-6 md:px-8 mb-10">
+     <div className="flex md:flex-row flex-col rounded-lg shadow-lg bg-white justify-center items-center my-12">
+       <div className="w-full">
+         <img
+           className="w-full rounded-t-lg md:rounded-l-lg"
+           src="/images/home/hero.jpg"
+           alt="Laptop and Stethoscope"
+         />
+       </div>
+       <div
+         className="flex flex-col py-5 px-8 font-bold"
+         style={{ fontSize: "1.125rem" }}
+       >
+         <p className="mb-10">{hero?.text1}</p>
+         <p className="mb-10">{hero?.text2}</p>
+         <p>{hero?.text3}</p>
+       </div>
+     </div>
+   </div>
+ );
+};
+
 export const AboutMe: FunctionComponent = () => {
   return (
-    <div className="mb-10">
+    <div className="bg-gray-300 px-6 md:px-8 py-15 mb-10">
       <h2 className="text-3xl mb-5 font-bold">About Me</h2>
       <p>{aboutMe?.text}</p>
     </div>
@@ -142,7 +166,7 @@ export const AboutMe: FunctionComponent = () => {
 
 export const Services: FunctionComponent = () => {
   return (
-    <div className="mb-10">
+    <div className="mb-15">
       <h2 className="text-3xl mb-5 font-bold">What do you need help with?</h2>
       <div
         className="grid gap-10 mx-10"
@@ -154,7 +178,7 @@ export const Services: FunctionComponent = () => {
           <a
             href={service?.href}
             key={index}
-            className="p-5 rounded-lg shadow-lg hover:bg-blue-500 hover:text-white"
+            className="p-5 rounded-lg shadow-lg bg-white text-black hover:bg-gray-300 transition ease-in-out duration-200"
           >
             <div className="flex flex-col justify-center items-center">
               <p className="font-bold">{service.title}</p>
@@ -181,30 +205,23 @@ const Index: FunctionComponent<Index> = ({ data }) => {
     mapTestimonialData
   );
 
+  console.log("data: ", data);
+
   return (
     <>
       <SEO title="Home" image="/logo.png" />
       <Layout>
-        <div className="flex md:flex-row flex-col justify-center items-center mb-10">
-          <div className="w-full my-12 md:mr-6">
-            <img
-              className="w-full rounded-lg"
-              src="/images/home/hero.jpg"
-              alt="Laptop and Stethoscope"
-            />
-          </div>
-          <div
-            className="flex flex-col md:mb-12 mb-12 md:ml-6 font-bold"
-            style={{ fontSize: "1.25rem" }}
-          >
-            <p className="mb-10">{hero?.text1}</p>
-            <p className="mb-10">{hero?.text2}</p>
-            <p>{hero?.text3}</p>
-          </div>
+        <Hero />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Services />
         </div>
+
         <AboutMe />
-        <Services />
-        <Testimonials testimonials={testimonials} />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Testimonials testimonials={testimonials} />
+        </div>
       </Layout>
     </>
   );

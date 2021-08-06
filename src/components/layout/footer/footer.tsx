@@ -114,7 +114,7 @@ export const Footer: FunctionComponent<Footer> = ({
             © {new Date().getFullYear()} {copyrightOwner}. All rights reserved.
           </p>
           <p className="text-xs text-gray-400">
-            Website created by <a href={createdBy?.link}>{createdBy?.name}</a>
+            Website created by <a href={createdBy?.link} className="text-blue-400">{createdBy?.name}</a>
           </p>
         </div>
       </div>

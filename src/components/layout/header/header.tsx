@@ -160,9 +160,9 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
     setMobileDrawerOn(!mobileDrawerOn);
   };
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-blue-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="lg:w-0 lg:flex-1">
             <div className="flex">
               <a href="/">{logo}</a>
@@ -246,9 +246,9 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
                         <a
                           key={index}
                           href={menuItem.href}
-                          className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
+                          className="text-white m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                         >
-                          <div className="text-base leading-6 font-medium text-gray-900">
+                          <div className="text-base leading-6 font-medium text-white">
                             {menuItem.label}
                           </div>
                         </a>

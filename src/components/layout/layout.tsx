@@ -82,12 +82,12 @@ const menuItems: MenuItem[] = [
     ],
   },
   {
-    label: "Contact",
-    href: "/contact/",
-  },
-  {
     label: "Blog",
     href: "/blog/",
+  },
+  {
+    label: "Book a Call",
+    href: "/contact/",
   },
 ];
 
@@ -95,9 +95,9 @@ const footer: Footer = {
   copyrightOwner: "Kevin Gilotra",
   facebook: "https://geek.sg/",
   instagram: "https://geek.sg/",
-  twitter: "https://geek.sg/",
-  github: "https://geek.sg/",
-  dribble: "https://geek.sg/",
+  // twitter: "https://geek.sg/",
+  // github: "https://geek.sg/",
+  // dribble: "https://geek.sg/",
   linkedin: "https://geek.sg/",
   createdBy: {
     name: "Kevin Johar",
@@ -138,9 +138,7 @@ export const Layout: FunctionComponent = ({ children }) => {
         <meta name="theme-color" content="#fff" />
       </Helmet>
       <Header menuItems={menuItems} logo={logo} />
-      <div className="min-h-screen">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
-      </div>
+      <div className="min-h-screen">{children}</div>
       <Footer {...footer} />
     </>
   );
