@@ -3,65 +3,61 @@ import React, { FunctionComponent } from "react";
 interface Service {
   title: string;
   description?: string;
-  href: string;
+  price: string;
 }
 
 const services: Service[] = [
   {
-    title: "Free Consultation",
-    description: "Get a free 15-minute consultation with me",
-    href: "/services/consultation",
+    title: "Free 15-Minute Consultation",
+    description: "BEFORE you pay for anything, you can ask ANY questions you have about my services, credentials and what you can expect from Aa over a 15-minute phone call with me!",
+    price: "FREE",
   },
   {
     title: "AMCAS Activities Section",
-    description: "$30",
-    href: "/services/amcas-activities",
+    description: "Includes unlimited edits for the 15 entries in your Activities section and brainstorming ideas for how you can utilize AMCAS character limits effectively to discuss more life experiences in your application!",
+    price: "$30",
   },
   {
     title: "AMCAS Personal Statement",
-    description: "$30",
-    href: "/services/amcas-personal-statement",
+    description: "Unlimited edits of your personal statement to ensure your essay effectively explains why you want to pursue a medical career in a unique fashion!",
+    price: "$30",
   },
   {
-    title: "UofT/UWO Essay Editing",
-    description: "$25/school",
-    href: "/services/uoft-uwo-essay",
+    title: "OMSAS Autobiographical Sketch Editing",
+    description: " Includes unlimited edits for up to 32 entries in your ABS and assistance with making your experiences stand out from other applicants!",
+    price: "$30",
   },
   {
-    title: "Secondary Applications",
-    description: "$25/school",
-    href: "/services/sec-apps",
+    title: "School-Specific Essay/Secondary Application Editing",
+    description: "Includes editing for individual school-specific applications to ensure your essay answers meet the mission statements of each school and help you stand out from other applicants!",
+    price: "$25 (per school)"
   },
   {
-    title: "OMSAS ABS",
-    description: "Autobiographical Sketch - $25",
-    href: "/services/omsas-abs",
+    title: "Interview Prep",
+    description: "Includes mock interview questions (MMI, MPI, and panel) with corresponding personalized feedback for you over a Zoom call with each sessions being customized based on your needs",
+    price: "$20 (per hour)"
   },
 ];
+
+const slice = {
+  services,
+  footer: "***A minimum of 2 hours is spent on each application document you request editing for"
+};
 
 export const Services: FunctionComponent = () => {
   return (
     <div className="mb-15">
       <h2 className="text-3xl mb-5 font-bold">What do you need help with?</h2>
-      <div
-        className="grid gap-10 mx-10"
-        style={{
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-        }}
-      >
-        {services.map((service, index) => (
-          <a
-            href={service?.href}
-            key={index}
-            className="p-5 rounded-lg shadow-lg bg-white text-black hover:bg-gray-300 transition ease-in-out duration-200"
-          >
-            <div className="flex flex-col justify-center items-center">
-              <p className="font-bold">{service.title}</p>
-              <p className="text-xs">{service?.description}</p>
-            </div>
-          </a>
+        {slice?.services.map((service, index) => (
+          <div key={index}
+               className={`p-5 mb-10 flex flex-col justify-between rounded-lg shadow-lg bg-white text-black transition ease-in-out duration-200`}>
+            <p className="font-bold mr-5 flex-1 mb-2">{service.title}</p>
+            <p className="text-sm mb-1">{service?.description}</p>
+            <p className="text-red-600">{service?.price}</p>
+          </div>
         ))}
-      </div>
+
+        <p className="text-red-600">{slice?.footer}</p>
     </div>
   );
 };

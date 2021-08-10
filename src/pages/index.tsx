@@ -5,6 +5,9 @@ import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
 import { Testimonials } from "../createPages/templates/testimonials";
 import { Testimonial } from "../types";
+import { Hero } from "./index-slices/hero";
+import { AboutMe } from "./index-slices/about-me";
+import { Services } from "./index-slices/services";
 
 export const pageQuery = graphql`
   {
@@ -66,130 +69,6 @@ interface Index {
   data: QueryData;
 }
 
-const hero = {
-  text1: "Need help editing your med school applications?",
-  text2:
-    "Can’t afford companies charging $1000s for a task that only takes 1-2 hours?",
-  text3: "AFFORDABLE APPS is the right place for you!",
-  img: {
-    src: "/images/home/hero.jpg",
-    alt: "Laptop and Stethoscope",
-  },
-};
-
-const aboutMe = {
-  text:
-    "My name is Kevin Gilotra, I was born and raised in Mississauga, ON for " +
-    "the first two decades of my life after which I decided to pursue medical " +
-    "school at Stony Brook University in Long Island, NY. I completed my " +
-    "undergraduate degree in kinesiology at McMaster University as a part of the " +
-    "class of 2021 where I gained numerous skills through my research and " +
-    "extra-curricular endeavours. As someone who has been through the MD " +
-    "admissions process in both Canada and the US, I have the credentials needed " +
-    "to help you create a well-rounded application for medical school. During " +
-    "my application cycle, I was fortunate to have interviewed at several " +
-    "mid-tier and upper-tier medical schools in both the US and Canada, which " +
-    "ultimately translated to 4 total acceptances as a student who had only just " +
-    "completed his bachelor’s degree. I have the writing skills that can help " +
-    "present your research, volunteering and extra-curricular activities in a " +
-    "way that will make you stand out from the thousands of other applications " +
-    "in the pile. Affordable Apps is a medical school application editing and " +
-    "premedical student counseling service created by Kevin Gilotra with the " +
-    "effort to",
-};
-
-const services = [
-  {
-    title: "Free Consultation",
-    description: "Get a free 15-minute consultation with me",
-    href: "/services/consultation",
-  },
-  {
-    title: "AMCAS Activities Section",
-    description: "$30",
-    href: "/services/amcas-activities",
-  },
-  {
-    title: "AMCAS Personal Statement",
-    description: "$30",
-    href: "/services/amcas-personal-statement",
-  },
-  {
-    title: "UofT/UWO Essay Editing",
-    description: "$25/school",
-    href: "/services/uoft-uwo-essay",
-  },
-  {
-    title: "Secondary Applications",
-    description: "$25/school",
-    href: "/services/sec-apps",
-  },
-  {
-    title: "OMSAS ABS",
-    description: "Autobiographical Sketch - $25",
-    href: "/services/omsas-abs",
-  },
-];
-
-export const Hero: FunctionComponent = () => {
- return (
-   <div className="bg-blue-400 py-15 px-6 md:px-8 mb-10">
-     <div className="flex md:flex-row flex-col rounded-lg shadow-lg bg-white justify-center items-center my-12">
-       <div className="w-full">
-         <img
-           className="w-full rounded-t-lg md:rounded-l-lg"
-           src="/images/home/hero.jpg"
-           alt="Laptop and Stethoscope"
-         />
-       </div>
-       <div
-         className="flex flex-col py-5 px-8 font-bold"
-         style={{ fontSize: "1.125rem" }}
-       >
-         <p className="mb-10">{hero?.text1}</p>
-         <p className="mb-10">{hero?.text2}</p>
-         <p>{hero?.text3}</p>
-       </div>
-     </div>
-   </div>
- );
-};
-
-export const AboutMe: FunctionComponent = () => {
-  return (
-    <div className="bg-gray-300 px-6 md:px-8 py-15 mb-10">
-      <h2 className="text-3xl mb-5 font-bold">About Me</h2>
-      <p>{aboutMe?.text}</p>
-    </div>
-  );
-};
-
-export const Services: FunctionComponent = () => {
-  return (
-    <div className="mb-15">
-      <h2 className="text-3xl mb-5 font-bold">What do you need help with?</h2>
-      <div
-        className="grid gap-10 mx-10"
-        style={{
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-        }}
-      >
-        {services.map((service, index) => (
-          <a
-            href={service?.href}
-            key={index}
-            className="p-5 rounded-lg shadow-lg bg-white text-black hover:bg-gray-300 transition ease-in-out duration-200"
-          >
-            <div className="flex flex-col justify-center items-center">
-              <p className="font-bold">{service.title}</p>
-              <p className="text-xs">{service?.description}</p>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 const Index: FunctionComponent<Index> = ({ data }) => {
   const mapTestimonialData = ({ node }: { node: TestimonialData["node"] }) => ({
@@ -205,21 +84,14 @@ const Index: FunctionComponent<Index> = ({ data }) => {
     mapTestimonialData
   );
 
-  console.log("data: ", data);
-
   return (
     <>
       <SEO title="Home" image="/logo.png" />
       <Layout>
-        <Hero />
-
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Hero />
           <Services />
-        </div>
-
-        <AboutMe />
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <AboutMe />
           <Testimonials testimonials={testimonials} />
         </div>
       </Layout>

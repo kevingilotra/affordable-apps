@@ -88,17 +88,18 @@ const menuItems: MenuItem[] = [
   {
     label: "Book a Call",
     href: "/contact/",
+    classes: "bg-blue-400 px-3 py-1 rounded-full",
   },
 ];
 
 const footer: Footer = {
   copyrightOwner: "Kevin Gilotra",
-  facebook: "https://geek.sg/",
-  instagram: "https://geek.sg/",
+  facebook: "https://www.facebook.com/kevin.gilotra.39/",
+  instagram: "https://www.instagram.com/kevin.gilotra/",
   // twitter: "https://geek.sg/",
   // github: "https://geek.sg/",
   // dribble: "https://geek.sg/",
-  linkedin: "https://geek.sg/",
+  linkedin: "https://www.linkedin.com/in/kevingilotra/",
   createdBy: {
     name: "Kevin Johar",
     link: "https://kevinjohar.com",

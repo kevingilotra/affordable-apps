@@ -5,6 +5,7 @@ export interface DropdownItem {
   description: string;
   icon: JSX.Element;
   href: string;
+  classes?: string;
 }
 
 export interface MenuItemWithDropdown {
@@ -15,6 +16,7 @@ export interface MenuItemWithDropdown {
 export interface MenuItemWithoutDropdown {
   label: string;
   href: string;
+  classes?: string;
 }
 
 export type MenuItem = MenuItemWithDropdown | MenuItemWithoutDropdown;
@@ -76,12 +78,11 @@ export const FlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
           <div className="rounded-lg shadow-xs overflow-hidden">
             <div className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
               {dropdownItems.map(
-                ({ label: text, description, href, icon }, index) => (
+                ({ label: text, description, href, icon, classes }, index) => (
                   <a
                     key={index}
                     href={href}
-                    className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
-                  >
+                    className={`${classes} -m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150`}>
                     {icon}
                     <div className="space-y-1">
                       <p className="text-base leading-6 font-medium text-gray-900">
@@ -133,11 +134,11 @@ export const MobileFlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
         </div>
       </div>
       {isOpen &&
-        dropdownItems.map(({ label: text, href }, index) => (
+        dropdownItems.map(({ label: text, href, classes }, index) => (
           <a
             key={index}
             href={href}
-            className="-m-3 pl-6 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
+            className={`${classes} -m-3 pl-6 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150`}
           >
             <div className="text-base leading-6 font-light text-gray-900">
               {text}
@@ -160,7 +161,7 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
     setMobileDrawerOn(!mobileDrawerOn);
   };
   return (
-    <div className="relative bg-blue-400">
+    <div className="sticky top-0 bg-white border-b-2 border-blue-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="lg:w-0 lg:flex-1">
@@ -196,10 +197,10 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
               ) : (
                 <a
                   key={index}
-                  href={menuItem.href}
-                  className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+                  href={menuItem?.href}
+                  className={`${menuItem?.classes} text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150`}
                 >
-                  {menuItem.label}
+                  {menuItem?.label}
                 </a>
               )
             )}
@@ -245,11 +246,10 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
                       ) : (
                         <a
                           key={index}
-                          href={menuItem.href}
-                          className="text-white m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
-                        >
-                          <div className="text-base leading-6 font-medium text-white">
-                            {menuItem.label}
+                          href={menuItem?.href}
+                          className={`${menuItem?.classes} -m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150`}>
+                          <div className="text-base leading-6 font-medium">
+                            {menuItem?.label}
                           </div>
                         </a>
                       )
