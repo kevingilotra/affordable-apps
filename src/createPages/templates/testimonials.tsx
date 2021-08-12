@@ -6,7 +6,7 @@ export interface TestimonialPage {
   testimonials: Testimonial[];
 }
 
-export const Testimonials: FunctionComponent<TestimonialPage> = ({
+const Testimonials: FunctionComponent<TestimonialPage> = ({
   testimonials,
 }) => {
   return (
@@ -18,3 +18,5 @@ export const Testimonials: FunctionComponent<TestimonialPage> = ({
     </div>
   );
 };
+
+export default Testimonials;
