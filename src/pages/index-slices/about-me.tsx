@@ -21,7 +21,7 @@ const aboutMe = {
     "effort to",
 };
 
-export const AboutMe: FunctionComponent = () => {
+const AboutMe: FunctionComponent = () => {
   return (
     <div className="mb-15">
       <h2 className="text-3xl mb-5 font-bold">About Me</h2>
@@ -29,3 +29,5 @@ export const AboutMe: FunctionComponent = () => {
     </div>
   );
 };
+
+export default AboutMe;

@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import Testimonials from "../../createPages/templates/testimonials";
 
 interface Service {
   title: string;
@@ -44,7 +45,7 @@ const slice = {
   footer: "***A minimum of 2 hours is spent on each application document you request editing for"
 };
 
-export const Services: FunctionComponent = () => {
+const Services: FunctionComponent = () => {
   return (
     <div className="mb-15">
       <h2 className="text-3xl mb-5 font-bold">What do you need help with?</h2>
@@ -61,3 +62,5 @@ export const Services: FunctionComponent = () => {
     </div>
   );
 };
+
+export default Services;

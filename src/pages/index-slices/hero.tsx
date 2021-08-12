@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import Testimonials from "../../createPages/templates/testimonials";
 
 const hero = {
   slogan: "More editing, less money",
@@ -10,7 +11,7 @@ const hero = {
   },
 };
 
-export const Hero: FunctionComponent = () => {
+const Hero: FunctionComponent = () => {
   return (
     <div className="flex flex-col justify-center items-center my-15 text-center">
       <img
@@ -24,3 +25,5 @@ export const Hero: FunctionComponent = () => {
     </div>
   );
 };
+
+export default Hero;
