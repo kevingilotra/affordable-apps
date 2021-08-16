@@ -8,6 +8,7 @@ import Testimonials from "../createPages/templates/testimonials";
 import Hero from "./index-slices/hero";
 import Services from "./index-slices/services";
 import AboutMe from "./index-slices/about-me";
+import WhyChoose from "./index-slices/why-choose";
 
 export const pageQuery = graphql`
   {
@@ -91,6 +92,7 @@ const Index: FunctionComponent<Index> = ({ data }) => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Hero />
           <Services />
+          <WhyChoose />
           <AboutMe />
           <Testimonials testimonials={testimonials} />
         </div>
