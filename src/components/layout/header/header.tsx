@@ -55,7 +55,7 @@ export const FlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
       <button
         onClick={toggleIsOpen}
         type="button"
-        className="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+        className="px-3 py-1 text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
       >
         <span>{label}</span>
         {/* Item active: "text-gray-600", Item inactive: "text-gray-400" */}
@@ -192,7 +192,7 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
               </svg>
             </button>
           </div>
-          <nav className="hidden md:flex space-x-10">
+          <nav className="hidden md:flex space-x-5">
             {menuItems.map((menuItem, index) =>
               isMenuItemWithDropdown(menuItem) ? (
                 <FlyoutMenu {...menuItem} key={index} />
@@ -201,7 +201,7 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
                   key={index}
                   href={menuItem?.href}
                   target={menuItem?.target}
-                  className={`${menuItem?.classes} text-base leading-6 font-medium focus:outline-none transition ease-in-out duration-150`}>
+                  className={`${menuItem?.classes} px-3 py-1 text-base leading-6 font-medium focus:outline-none transition ease-in-out duration-150`}>
                   {menuItem?.label}
                 </a>
               )
