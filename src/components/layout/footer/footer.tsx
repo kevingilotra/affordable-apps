@@ -113,7 +113,7 @@ export const Footer: FunctionComponent<Footer> = ({
           <p className="text-center text-base leading-6 text-gray-400">
             © {new Date().getFullYear()} {copyrightOwner}. All rights reserved.
           </p>
-          <p className="text-xs text-gray-400">
+          <p className="md:text-left text-center text-xs text-gray-400">
             Website created by <a href={createdBy?.link} className="text-blue-400">{createdBy?.name}</a>
           </p>
         </div>
