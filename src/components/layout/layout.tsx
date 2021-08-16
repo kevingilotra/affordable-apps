@@ -36,10 +36,12 @@ const menuItems: MenuItem[] = [
   {
     label: "Home",
     href: "/",
+    classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
   },
   {
     label: "About Me",
     href: "/about/",
+    classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
   },
   {
     label: "Services",
@@ -80,15 +82,18 @@ const menuItems: MenuItem[] = [
         "/contact"
       ),
     ],
+    classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
   },
   {
     label: "Blog",
     href: "/blog/",
+    classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
   },
   {
     label: "Book a Call",
-    href: "/contact/",
-    classes: "bg-blue-400 px-3 py-1 rounded-full",
+    href: "https://calendly.com/affordableapps/15-minute-free-consultation",
+    classes: "bg-blue-500 px-3 py-1 rounded-full text-white hover:bg-blue-400 focus:bg-blue-400",
+    target: "_blank",
   },
 ];
 

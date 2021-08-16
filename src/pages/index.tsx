@@ -3,11 +3,11 @@ import { graphql } from "gatsby";
 import { FluidObject } from "gatsby-image";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
-import { Testimonials } from "../createPages/templates/testimonials";
 import { Testimonial } from "../types";
-import { Hero } from "./index-slices/hero";
-import { AboutMe } from "./index-slices/about-me";
-import { Services } from "./index-slices/services";
+import Testimonials from "../createPages/templates/testimonials";
+import Hero from "./index-slices/hero";
+import Services from "./index-slices/services";
+import AboutMe from "./index-slices/about-me";
 
 export const pageQuery = graphql`
   {

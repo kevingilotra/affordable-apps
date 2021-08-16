@@ -6,6 +6,7 @@ export interface DropdownItem {
   icon: JSX.Element;
   href: string;
   classes?: string;
+  target?: string;
 }
 
 export interface MenuItemWithDropdown {
@@ -17,6 +18,7 @@ export interface MenuItemWithoutDropdown {
   label: string;
   href: string;
   classes?: string;
+  target?: string;
 }
 
 export type MenuItem = MenuItemWithDropdown | MenuItemWithoutDropdown;
@@ -163,7 +165,7 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
   return (
     <div className="sticky top-0 bg-white border-b-2 border-blue-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
           <div className="lg:w-0 lg:flex-1">
             <div className="flex">
               <a href="/">{logo}</a>
@@ -198,8 +200,8 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
                 <a
                   key={index}
                   href={menuItem?.href}
-                  className={`${menuItem?.classes} text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150`}
-                >
+                  target={menuItem?.target}
+                  className={`${menuItem?.classes} text-base leading-6 font-medium focus:outline-none transition ease-in-out duration-150`}>
                   {menuItem?.label}
                 </a>
               )

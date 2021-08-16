@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import Testimonials from "../../createPages/templates/testimonials";
 
 const hero = {
   slogan: "More editing, less money",
@@ -21,7 +20,9 @@ const Hero: FunctionComponent = () => {
       />
       <h1 className="md:text-5xl text-4xl font-bold md:mt-10 mt-5">{ hero?.slogan }</h1>
       <p className="text-gray-500 mb-10">{ hero?.description }</p>
-      <button className="rounded-full bg-blue-500 text-white px-5 py-2">{ hero?.cta }</button>
+      <a href="https://calendly.com/affordableapps/15-minute-free-consultation" target="_blank" className="rounded-full bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white px-5 py-2">
+        { hero?.cta }
+      </a>
     </div>
   );
 };
