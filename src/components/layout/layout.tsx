@@ -116,6 +116,7 @@ const footer: Footer = {
     name: "Kevin Johar",
     link: "https://kevinjohar.com",
   },
+  descriptionText: "Affordable applications (Aa) is a medical school application review and pre-medical student counseling service created by Kevin Gilotra to help future MDs apply to medical school at lower costs. Affordable Apps offers low-priced application editing services to ensure students can apply to more schools with higher quality applications!",
 };
 
 export const Layout: FunctionComponent = ({ children }) => {

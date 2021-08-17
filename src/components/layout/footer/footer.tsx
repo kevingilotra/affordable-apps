@@ -12,6 +12,7 @@ export interface Footer {
     name: string,
     link: string
   },
+  descriptionText: string;
 }
 
 export const Footer: FunctionComponent<Footer> = ({
@@ -22,7 +23,8 @@ export const Footer: FunctionComponent<Footer> = ({
   github,
   dribble,
   linkedin,
-  createdBy
+  createdBy,
+  descriptionText
 }) => {
   return (
     <div className="bg-white">
@@ -110,7 +112,7 @@ export const Footer: FunctionComponent<Footer> = ({
           )}
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center md:text-left px-3 text-sm text-gray-400 mb-4 text-justify">Affordable applications (Aa) is a medical school application review and pre-medical student counseling service created by Kevin Gilotra to help future MDs apply to medical school at lower costs. Affordable Apps offers low-priced application editing services to ensure students can apply to more schools with higher quality applications!</p>
+          <p className="text-center md:text-left md:px-0 px-3 text-sm text-gray-400 mb-4 text-justify">{descriptionText}</p>
           <p className="text-center md:text-left text-base leading-6 text-gray-400">
             © {new Date().getFullYear()} {copyrightOwner}. All rights reserved.
           </p>
