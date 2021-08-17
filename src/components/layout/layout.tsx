@@ -92,13 +92,13 @@ const menuItems: MenuItem[] = [
   {
     label: "FREE Resources",
     href: "https://drive.google.com/drive/mobile/folders/1OHQM09EcTcG-LtUv2NRNco2iV2YcMF8l?usp=sharing",
-    classes: "rounded-full border border-blue-500 text-blue-500 hover:text-blue-400 hover:border-blue-400",
+    classes: "rounded-full border border-blue-500 text-blue-500 hover:text-blue-400 hover:border-blue-400 md:px-5 justify-center",
     target: "_blank",
   },
   {
     label: "Book a Call",
     href: "https://calendly.com/affordableapps/15-minute-free-consultation",
-    classes: "bg-blue-500 rounded-full text-white hover:bg-blue-400 focus:bg-blue-400",
+    classes: "bg-blue-500 rounded-full text-white hover:bg-blue-400 focus:bg-blue-400 md:px-5 justify-center",
     target: "_blank",
   },
 ];

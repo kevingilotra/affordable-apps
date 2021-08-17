@@ -9,6 +9,7 @@ import Hero from "./index-slices/hero";
 import Services from "./index-slices/services";
 import AboutMe from "./about-me";
 import WhyChoose from "./index-slices/why-choose";
+import { CtaButton } from "../components/cta-button";
 
 export const pageQuery = graphql`
   {
@@ -93,6 +94,15 @@ const Index: FunctionComponent<Index> = ({ data }) => {
           <Hero />
           <Services />
           <WhyChoose />
+          <div className="mb-15">
+            <p className="font-bold text-red-500 text-2xl">The ULTIMATE goal of Affordable Apps is to...</p>
+            <div className="bg-red-400 p-10 rounded-lg text-white">
+              <p className="font-bold text-4xl">increase the diversity of future physician's by supporting underrepresented minorities</p>
+            </div>
+            <div className="flex justify-center mt-10">
+              <CtaButton cta="Get Started" classes="bg-red-500 border border-red-500 text-white hover:bg-white hover:text-red-500 focus:bg-white focus:text-red-500 text-2xl"/>
+            </div>
+          </div>
           <Testimonials testimonials={testimonials} />
         </div>
       </Layout>

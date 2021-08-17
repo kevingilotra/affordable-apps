@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import { CtaButton } from "../../components/cta-button";
 
 const hero = {
   slogan: "More editing, less money",
@@ -20,9 +21,7 @@ const Hero: FunctionComponent = () => {
       />
       <h1 className="md:text-5xl text-4xl font-bold md:mt-10 mt-5">{ hero?.slogan }</h1>
       <p className="text-gray-600 mb-5">{ hero?.description }</p>
-      <a href="https://calendly.com/affordableapps/15-minute-free-consultation" target="_blank" className="rounded-full bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white px-5 py-2">
-        { hero?.cta }
-      </a>
+      <CtaButton classes="border-2 border-blue-500 bg-blue-500 hover:bg-white focus:bg-white hover:text-blue-500 focus:text-blue-500 text-xl"/>
     </div>
   );
 };
