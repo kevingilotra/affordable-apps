@@ -14,7 +14,7 @@ const Hero: FunctionComponent = () => {
   return (
     <div className="flex flex-col justify-center items-center my-15 text-center">
       <img
-        className="w-full rounded"
+        className="md:w-10/12 w-full rounded"
         src="/images/home/hero.jpg"
         alt="Laptop and Stethoscope"
       />

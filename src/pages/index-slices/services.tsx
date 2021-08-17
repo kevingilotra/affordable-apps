@@ -47,7 +47,7 @@ const slice = {
 
 const Services: FunctionComponent = () => {
   return (
-    <div className="md:-mx-10 md:p-10 px-3 py-5 border-2 border-blue-500 text-blue-500 mb-15">
+    <div className="md:p-10 px-3 py-5 border-4 border-blue-500 text-blue-500 mb-15">
       <h2 className="text-3xl mb-5 font-bold italic">What do you need help with?</h2>
         {slice?.services.map((service, index) => (
           <div key={index}

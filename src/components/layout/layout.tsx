@@ -33,14 +33,14 @@ const getServiceDropdownItem = (
 
 const logo = <img className="w-auto h-15" src={icon} alt="Workflow" />;
 const menuItems: MenuItem[] = [
-  {
-    label: "Home",
-    href: "/",
-    classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
-  },
+  // {
+  //   label: "Home",
+  //   href: "/",
+  //   classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
+  // },
   {
     label: "About Me",
-    href: "/about/",
+    href: "/about-me",
     classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
   },
   {
@@ -92,7 +92,7 @@ const menuItems: MenuItem[] = [
   {
     label: "FREE Resources",
     href: "https://drive.google.com/drive/mobile/folders/1OHQM09EcTcG-LtUv2NRNco2iV2YcMF8l?usp=sharing",
-    classes: "rounded-full border border-blue-500 text-blue-500 hover:text-blue-300 hover:border-blue-300",
+    classes: "rounded-full border border-blue-500 text-blue-500 hover:text-blue-400 hover:border-blue-400",
     target: "_blank",
   },
   {

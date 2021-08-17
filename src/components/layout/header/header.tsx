@@ -192,7 +192,7 @@ export const Header: FunctionComponent<Header> = ({ menuItems, logo }) => {
               </svg>
             </button>
           </div>
-          <nav className="hidden md:flex space-x-5">
+          <nav className="hidden sm:flex space-x-5">
             {menuItems.map((menuItem, index) =>
               isMenuItemWithDropdown(menuItem) ? (
                 <FlyoutMenu {...menuItem} key={index} />
