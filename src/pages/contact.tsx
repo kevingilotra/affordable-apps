@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useState } from "react";
-import { navigate } from "gatsby";
 import { Layout } from "../components/layout";
 
 const createFormDataObj = (data: any) => {
@@ -60,6 +59,7 @@ export const NotFound: FunctionComponent = () => {
                 Contact Me
               </h2>
               <form
+                data-netlify-recaptcha="true"
                 name={FORM_NAME}
                 data-netlify="true"
                 onSubmit={handleSubmit}
@@ -164,6 +164,7 @@ export const NotFound: FunctionComponent = () => {
                     />
                   </div>
                 </div>
+                <div data-netlify-recaptcha="true"></div>
                 <div className="text-right sm:col-span-2">
                   <span className="inline-flex rounded-md shadow-sm">
                     <button
