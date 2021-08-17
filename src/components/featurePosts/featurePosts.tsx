@@ -77,7 +77,7 @@ export const FeaturePosts: FunctionComponent<FeaturePosts> = ({
 }) => {
   const [topPost, ...otherFeature] = featurePosts;
   return (
-    <div className="relative py-6">
+    <div className="relative">
       <div className="relative max-w-7xl mx-auto">
         <TopFeaturePost {...topPost} />
         <h2 className="text-2xl leading-9 tracking-tight font-semibold text-gray-900 sm:leading-10 text-center mt-3 mb-8">
