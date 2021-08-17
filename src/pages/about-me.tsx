@@ -69,8 +69,8 @@ const AboutMe: FunctionComponent = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-15">
         <h1 className="text-4xl mb-5 font-bold">Meet the Founder</h1>
         <div className="flex md:flex-row flex-col justify-center align-middle">
-          <img className="md:w-1/2 w-full" src={aboutMe?.founderImg?.src} alt={aboutMe?.founderImg?.alt} />
-          <div className="pl-10">
+          <img className="md:w-1/2 w-full rounded-lg shadow-lg" src={aboutMe?.founderImg?.src} alt={aboutMe?.founderImg?.alt} />
+          <div className="md:pl-10 md:pt-0 pt-5 ">
             {aboutMe?.items?.map((item, index) => (
               <p className="mb-3" key={index}>
                 <span className="font-bold">{item?.title}: </span>
