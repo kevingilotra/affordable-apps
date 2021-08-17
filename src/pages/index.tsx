@@ -96,11 +96,18 @@ const Index: FunctionComponent<Index> = ({ data }) => {
           <WhyChoose />
           <div className="mb-15">
             <p className="font-bold text-red-500 text-2xl">The ULTIMATE goal of Affordable Apps is to...</p>
-            <div className="bg-red-400 p-10 rounded-lg text-white">
-              <p className="font-bold text-4xl">increase the diversity of future physician's by supporting underrepresented minorities</p>
+            <div className="bg-red-400 p-10 rounded-lg ">
+              <p className="font-bold text-4xl text-white">increase the diversity of future physician's by supporting underrepresented minorities</p>
+            </div>
+            <p className="mt-8 font-bold text-red-500 text-2xl">And...</p>
+            <div className="bg-yellow-200 p-10 rounded-lg">
+              <p className="font-bold text-4xl text-gray-500">
+                <span>50% of the service fees given to AffordableApps will be donated to the </span>
+                <a className="underline hover:text-gray-400 focus:gray-400" href="https://nationalpcf.org/" target="_blank">National Pediatric Cancer Foundation</a>
+              </p>
             </div>
             <div className="flex justify-center mt-10">
-              <CtaButton cta="Get Started" classes="bg-red-500 border border-red-500 text-white hover:bg-white hover:text-red-500 focus:bg-white focus:text-red-500 text-2xl"/>
+              <CtaButton cta="Get application help and support NPCF!" classes="bg-red-500 border border-red-500 text-white hover:bg-white hover:text-red-500 focus:bg-white focus:text-red-500 text-2xl"/>
             </div>
           </div>
           <Testimonials testimonials={testimonials} />
