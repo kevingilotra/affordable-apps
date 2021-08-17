@@ -45,43 +45,44 @@ const menuItems: MenuItem[] = [
   },
   {
     label: "Services",
-    dropdownItems: [
-      getServiceDropdownItem(
-        "15-Min FREE Consultation",
-        "Get a free 15-minute consultation with me",
-        "/services/consultation"
-      ),
-      getServiceDropdownItem(
-        "AMCAS Activities Section",
-        "$30",
-        "/services/amcas-activities"
-      ),
-      getServiceDropdownItem(
-        "AMCAS Personal Statement",
-        "$30",
-        "/services/amcas-personal-statement"
-      ),
-      getServiceDropdownItem(
-        "UofT/UWO Essay Editing",
-        "$25/school",
-        "/services/uoft-uwo-essay"
-      ),
-      getServiceDropdownItem(
-        "Secondary Applications",
-        "$25/school",
-        "/services/sec-apps"
-      ),
-      getServiceDropdownItem(
-        "OMSAS ABS",
-        "Autobiographical Sketch - $25",
-        "/services/omsas-abs"
-      ),
-      getServiceDropdownItem(
-        "Other",
-        "Please email me if your service isn't listed",
-        "/contact"
-      ),
-    ],
+    href: "/services",
+    // dropdownItems: [
+    //   getServiceDropdownItem(
+    //     "15-Min FREE Consultation",
+    //     "Get a free 15-minute consultation with me",
+    //     "/services/consultation"
+    //   ),
+    //   getServiceDropdownItem(
+    //     "AMCAS Activities Section",
+    //     "$30",
+    //     "/services/amcas-activities"
+    //   ),
+    //   getServiceDropdownItem(
+    //     "AMCAS Personal Statement",
+    //     "$30",
+    //     "/services/amcas-personal-statement"
+    //   ),
+    //   getServiceDropdownItem(
+    //     "UofT/UWO Essay Editing",
+    //     "$25/school",
+    //     "/services/uoft-uwo-essay"
+    //   ),
+    //   getServiceDropdownItem(
+    //     "Secondary Applications",
+    //     "$25/school",
+    //     "/services/sec-apps"
+    //   ),
+    //   getServiceDropdownItem(
+    //     "OMSAS ABS",
+    //     "Autobiographical Sketch - $25",
+    //     "/services/omsas-abs"
+    //   ),
+    //   getServiceDropdownItem(
+    //     "Other",
+    //     "Please email me if your service isn't listed",
+    //     "/contact"
+    //   ),
+    // ],
     classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
   },
   {
