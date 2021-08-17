@@ -97,7 +97,7 @@ const Index: FunctionComponent<Index> = ({ data }) => {
           <div className="mb-15">
             <p className="font-bold text-red-500 text-2xl">The ULTIMATE goal of Affordable Apps is to...</p>
             <div className="bg-red-400 p-10 rounded-lg ">
-              <p className="font-bold text-4xl text-white">increase the diversity of future physician's by supporting underrepresented minorities</p>
+              <p className="font-bold text-4xl text-white">increase the diversity of future physicians by supporting underrepresented minorities</p>
             </div>
             <p className="mt-8 font-bold text-red-500 text-2xl">And...</p>
             <div className="bg-yellow-200 p-10 rounded-lg">

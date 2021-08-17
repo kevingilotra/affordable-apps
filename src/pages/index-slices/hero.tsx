@@ -3,7 +3,7 @@ import { CtaButton } from "../../components/cta-button";
 
 const hero = {
   slogan: "More editing, less money",
-  description: "Offering affordable and personalized application reviews for pre-meds across North America at a fraction of the cost.",
+  description: "Offering affordable and personalized application reviews for pre-meds across North America.",
   cta: "Book a call with me!",
   img: {
     src: "/images/home/hero.jpg",

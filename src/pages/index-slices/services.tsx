@@ -35,21 +35,16 @@ const services: Service[] = [
   },
   {
     title: "Interview Prep",
-    description: "Includes mock interview questions (MMI, MPI, and panel) with corresponding personalized feedback for you over a Zoom call with each sessions being customized based on your needs",
+    description: "Includes mock interview questions (MMI, MPI, and panel) over Zoom with corresponding personalized feedback to ensure you present your best self on interview day!",
     price: "$20 (per hour)"
   },
 ];
 
-const slice = {
-  services,
-  footer: "***A minimum of 2 hours is spent on each application document you request editing for"
-};
-
 const Services: FunctionComponent = () => {
   return (
-    <div className="md:p-10 px-3 py-5 border-4 border-blue-500 text-blue-500 mb-15 rounded-lg">
+    <div className="md:p-10 px-3 pt-5 pb-3 border-4 border-blue-500 text-blue-500 mb-15 rounded-lg">
       <h2 className="text-3xl mb-5 font-bold italic">What do you need help with?</h2>
-        {slice?.services.map((service, index) => (
+        {services?.map((service, index) => (
           <div key={index}
                className={`p-5 mb-10 flex flex-col justify-between rounded-lg shadow-lg bg-white text-black transition ease-in-out duration-200`}>
             <p className="font-bold mr-5 flex-1 mb-2">{service.title}</p>
@@ -57,8 +52,6 @@ const Services: FunctionComponent = () => {
             <p className="text-red-600">{service?.price}</p>
           </div>
         ))}
-
-        <p>{slice?.footer}</p>
     </div>
   );
 };
