@@ -26,7 +26,7 @@ export const Footer: FunctionComponent<Footer> = ({
 }) => {
   return (
     <div className="bg-white">
-      <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-end md:justify-between lg:px-8">
         <div className="flex justify-center md:order-2">
           {facebook && (
             <a href={facebook} className="text-gray-400 hover:text-gray-500">
@@ -110,7 +110,8 @@ export const Footer: FunctionComponent<Footer> = ({
           )}
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-base leading-6 text-gray-400">
+          <p className="text-center md:text-left px-3 text-sm text-gray-400 mb-4 text-justify">Affordable applications (Aa) is a medical school application review and pre-medical student counseling service created by Kevin Gilotra to help future MDs apply to medical school at lower costs. Affordable Apps offers low-priced application editing services to ensure students can apply to more schools with higher quality applications!</p>
+          <p className="text-center md:text-left text-base leading-6 text-gray-400">
             © {new Date().getFullYear()} {copyrightOwner}. All rights reserved.
           </p>
           <p className="md:text-left text-center text-xs text-gray-400">
