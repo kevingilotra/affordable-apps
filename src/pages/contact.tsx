@@ -42,7 +42,7 @@ export const NotFound: FunctionComponent = () => {
 
   return (
     <Layout>
-      <div className="relative bg-white mt-2">
+      <div className="relative bg-white">
         <div className="hidden lg:block lg:absolute lg:inset-0">
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img
