@@ -27,7 +27,7 @@ export const createPages = async ({
   const { createPage } = actions;
   const result = await graphql<PostQuery>(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: {frontmatter: {template: {eq: "blog-post"}}}) {
         edges {
           node {
             id

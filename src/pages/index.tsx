@@ -7,7 +7,6 @@ import { Testimonial } from "../types";
 import Testimonials from "../createPages/templates/testimonials";
 import Hero from "./index-slices/hero";
 import Services from "./index-slices/services";
-import AboutMe from "./about-me";
 import WhyChoose from "./index-slices/why-choose";
 import { CtaButton } from "../components/cta-button";
 
