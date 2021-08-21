@@ -43,8 +43,8 @@ export const createPages = async ({
       }
     }
   `);
-  if (result.errors) {
-    console.error(result.errors);
+  if (result?.errors) {
+    console.error(result?.errors);
     throw new Error("Unexpected error from graphql query during create pages");
   }
 
@@ -54,7 +54,7 @@ export const createPages = async ({
     context: {},
   });
 
-  const posts = result.data?.allMarkdownRemark.edges;
+  const posts = result?.data?.allMarkdownRemark.edges;
   const tagsCollection = new Set<string>();
 
   if (!posts) throw new Error("No blog posts found");
@@ -98,7 +98,7 @@ export const createPages = async ({
   });
 
   // Create Tags Pages
-  tagsCollection.forEach((tag) => {
+  tagsCollection.forEach((tag) => {i
     createPage({
       path: `/tags/${tag}`,
       component: path.resolve(`src/createPages/templates/tag.tsx`),

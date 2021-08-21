@@ -21,8 +21,8 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            name
-            body
+            title
+            testimonial
             rating
             imgAlt
             publishedDate

@@ -85,11 +85,11 @@ const menuItems: MenuItem[] = [
     // ],
     classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
   },
-  {
-    label: "Blog",
-    href: "/blog/",
-    classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
-  },
+  // {
+  //   label: "Blog",
+  //   href: "/blog/",
+  //   classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
+  // },
   {
     label: "Contact Me",
     href: "/contact/",
