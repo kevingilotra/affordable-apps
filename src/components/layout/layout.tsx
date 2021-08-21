@@ -43,9 +43,9 @@ const menuItems: MenuItem[] = [
     href: "/about-me",
     classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
   },
-  {
-    label: "Services",
-    href: "/services",
+  // {
+  //   label: "Services",
+  //   href: "/services",
     // dropdownItems: [
     //   getServiceDropdownItem(
     //     "15-Min FREE Consultation",
@@ -83,8 +83,8 @@ const menuItems: MenuItem[] = [
     //     "/contact"
     //   ),
     // ],
-    classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
-  },
+    // classes: "text-gray-500 hover:text-gray-900 focus:text-gray-900",
+  // },
   // {
   //   label: "Blog",
   //   href: "/blog/",
