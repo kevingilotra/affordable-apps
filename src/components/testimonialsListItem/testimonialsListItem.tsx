@@ -12,7 +12,7 @@ export interface TestimonialsListItem {
 
 export const TestimonialsListItem: FunctionComponent<Testimonial> = ({
   name,
-  body,
+  testimonial,
   rating,
   publishedDate,
   img,
@@ -35,7 +35,7 @@ export const TestimonialsListItem: FunctionComponent<Testimonial> = ({
         ) : null}
       </div>
       <div className="w-full flex flex-col justify-between">
-          <p className="italic mb-3">{body}</p>
+          <p className="italic mb-3">{testimonial}</p>
         <div className="flex flex-row justify-between">
           <p className="font-bold">
             <span>{name} - </span>

@@ -32,7 +32,7 @@ export interface BlogPost {
 
 export interface Testimonial {
   name: string;
-  body: string;
+  testimonial: string;
   publishedDate: Date;
   rating: number;
   img?: FluidObject;

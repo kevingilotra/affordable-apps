@@ -50,8 +50,8 @@ interface TestimonialData {
   node: {
     id: string;
     frontmatter: {
-      name: string;
-      body: string;
+      title: string;
+      testimonial: string;
       rating: number;
       publishedDate: string;
       img: { childImageSharp: { fluid: FluidObject } };
@@ -73,9 +73,9 @@ interface Index {
 
 const Index: FunctionComponent<Index> = ({ data }) => {
   const mapTestimonialData = ({ node }: { node: TestimonialData["node"] }) => ({
-    name: node.frontmatter.name,
-    body: node.frontmatter.body,
-    rating: node.frontmatter.rating,
+    name: node?.frontmatter?.title,
+    testimonial: node?.frontmatter?.testimonial,
+    rating: node?.frontmatter?.rating,
     img: node?.frontmatter?.img?.childImageSharp?.fluid,
     imgAlt: node?.frontmatter?.imgAlt,
     publishedDate: new Date(node.frontmatter.publishedDate),
@@ -84,6 +84,8 @@ const Index: FunctionComponent<Index> = ({ data }) => {
   const testimonials: Testimonial[] = data.testimonials.edges.map(
     mapTestimonialData
   );
+
+  console.log('Testimonials: ', testimonials);
 
   return (
     <>
