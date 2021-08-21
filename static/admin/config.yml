@@ -35,8 +35,8 @@ collections:
     fields:
       - {label: "Template", name: "template", widget: "hidden", default: "testimonials"}
       - {label: "Name of Reviewer", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "string"}
-      - {label: "Rating", name: "rating", widget: "number"}
+      - {label: "Testimonial", name: "testimonial", widget: "string"}
+      - {label: "Rating", name: "rating", widget: "number", value_type: "int", min: 1, max: 5}
       - {label: "Published Date", name: "publishedDate", widget: "datetime"}
       - {label: "Image", name: "img", widget: image, required: false}
       - {label: "Image Alt Text", name: "imgAlt", widget: string, required: false}
