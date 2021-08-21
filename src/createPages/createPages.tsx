@@ -98,7 +98,7 @@ export const createPages = async ({
   });
 
   // Create Tags Pages
-  tagsCollection.forEach((tag) => {i
+  tagsCollection.forEach((tag) => {
     createPage({
       path: `/tags/${tag}`,
       component: path.resolve(`src/createPages/templates/tag.tsx`),
