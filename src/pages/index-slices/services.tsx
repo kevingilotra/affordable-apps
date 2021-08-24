@@ -36,7 +36,7 @@ const services: Service[] = [
   {
     title: "Interview Prep",
     description: "Includes mock interview questions (MMI, MPI, and panel) over Zoom with corresponding personalized feedback to ensure you present your best self on interview day!",
-    price: "$20 (per hour)"
+    price: "$35 (per hour)"
   },
 ];
 

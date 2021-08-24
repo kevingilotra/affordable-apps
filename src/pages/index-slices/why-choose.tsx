@@ -12,7 +12,7 @@ const whyChooseData = {
     cta: ""
   },
   section2: {
-    title: "Aa helps students apply to both foreign & domestic schools!",
+    title: "Aa helps students apply to foreign & domestic schools!",
     img: {
       src: "/images/home/domestic-foreign.jpg",
       alt: "Affordable Apps helps students with domestic & foreign med schools!",

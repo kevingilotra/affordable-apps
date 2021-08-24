@@ -108,7 +108,7 @@ const Index: FunctionComponent<Index> = ({ data }) => {
               </p>
             </div>
             <div className="flex justify-center mt-10">
-              <CtaButton cta="Get application help and support NPCF!" classes="bg-red-500 border border-red-500 text-white hover:bg-white hover:text-red-500 focus:bg-white focus:text-red-500 text-2xl"/>
+              <CtaButton cta="Get Application Help and Support NPCF!" classes="bg-red-500 border border-red-500 text-white hover:bg-white hover:text-red-500 focus:bg-white focus:text-red-500 text-2xl"/>
             </div>
           </div>
           <Testimonials testimonials={testimonials} />
