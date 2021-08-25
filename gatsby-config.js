@@ -1,5 +1,5 @@
 const siteName = "Affordable Apps";
-const siteShortName = "Affordable Apps";
+const siteShortName = "Aa";
 const siteUrl = "https://affordableapps.org";
 const siteDescription =
   "Affordable application services for students by a student";

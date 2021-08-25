@@ -77,6 +77,10 @@ export const SEO: React.FunctionComponent<SEO> = ({
       name: `twitter:description`,
       content: metaDescription,
     },
+    {
+      name: "google-site-verification",
+      content: "BGWWZb2_LOQ5Leu5rb7aSMaAvcAfd7agLK_aj0I6je0",
+    },
   ];
 
   if (keywords && keywords.length) {
