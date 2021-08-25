@@ -85,8 +85,6 @@ const Index: FunctionComponent<Index> = ({ data }) => {
     mapTestimonialData
   );
 
-  console.log('Testimonials: ', testimonials);
-
   return (
     <>
       <SEO title="Home" image="/logo.png" />

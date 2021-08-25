@@ -126,6 +126,7 @@ const footer: Footer = {
 
 export const Layout: FunctionComponent = ({ children }) => {
   const { title } = useSiteMetadata();
+  console.log("Title: ", title);
   return (
     <>
       <Helmet>
