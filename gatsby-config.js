@@ -1,6 +1,6 @@
 const siteName = "Affordable Apps";
 const siteShortName = "Affordable Apps";
-const siteUrl = "https://affordableapps.netlify.app";
+const siteUrl = "https://affordableapps.org";
 const siteDescription =
   "Affordable application services for students by a student";
 const siteKeyword = "";
