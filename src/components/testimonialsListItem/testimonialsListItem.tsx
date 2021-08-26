@@ -25,16 +25,15 @@ export const TestimonialsListItem: FunctionComponent<Testimonial> = ({
 
   return (
     <div className="rounded-lg shadow-lg flex flex-row p-5 mb-8">
-      <div className="mr-10">
-        {img ? (
+      {img ? (
+        <div>
           <Image
             fluid={img}
             alt={imgAlt}
             className="h-48 w-full sm:w-48 xl:h-52 xl:w-52 object-cover rounded-sm"
           />
-        ) : null}
-      </div>
-      <div className="w-full flex flex-col justify-between">
+      </div>) : null}
+      <div className="w-full flex flex-col justify-between ml-4 md:ml-10">
           <p className="italic mb-3">{testimonial}</p>
         <div className="flex md:flex-row flex-col justify-between">
           <p className="font-bold">
