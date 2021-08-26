@@ -25,7 +25,7 @@ const WhyChoose: FunctionComponent = () => {
   return (
     <div>
       <div className="md:-mx-10 p-10 bg-yellow-100 mb-15">
-        <h2 className="text-3xl mb-5 font-bold italic">Why Choose Affordable Apps (Aa)?</h2>
+        <h2 className="text-2xl md:text-4xl mb-5 font-bold italic">Why Choose Affordable Apps (Aa)?</h2>
         <ul className="mb-5">
           {whyChooseData?.section1?.points.map((point, index) => (
             <li className="list-disc list-inside mb-4" key={index}>{point}</li>
@@ -36,7 +36,7 @@ const WhyChoose: FunctionComponent = () => {
         </div>
       </div>
       <div className="md:p-10 p-5 border-4 border-blue-500 mb-15 rounded-lg">
-        <h2 className="text-3xl mb-5 font-bold italic text-blue-500">{whyChooseData?.section2?.title}</h2>
+        <h2 className="text-2xl md:text-4xl mb-5 font-bold italic text-blue-500">{whyChooseData?.section2?.title}</h2>
         <img src={whyChooseData?.section2?.img?.src}
          alt={whyChooseData?.section2?.img?.alt} />
         <p className="my-5">{whyChooseData?.section2?.caption}</p>

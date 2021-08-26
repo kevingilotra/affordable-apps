@@ -43,7 +43,7 @@ const services: Service[] = [
 const Services: FunctionComponent = () => {
   return (
     <div className="md:p-10 px-3 pt-5 pb-3 border-4 border-blue-500 text-blue-500 mb-15 rounded-lg">
-      <h2 className="text-3xl mb-5 font-bold italic">What do you need help with?</h2>
+      <h2 className="text-2xl mb-5 font-bold italic">What do you need help with?</h2>
         {services?.map((service, index) => (
           <div key={index}
                className={`p-5 mb-10 flex flex-col justify-between rounded-lg shadow-lg bg-white text-black transition ease-in-out duration-200`}>

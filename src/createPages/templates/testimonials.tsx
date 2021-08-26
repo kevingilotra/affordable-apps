@@ -11,7 +11,7 @@ const Testimonials: FunctionComponent<TestimonialPage> = ({
 }) => {
   return (
     <div>
-      <h2 className="text-3xl mb-5 font-bold italic">Testimonials</h2>
+      <h2 className="text-2xl md:text-4xl mb-5 font-bold italic">Testimonials</h2>
       {testimonials?.map((testimonial, index) => (
         <TestimonialsListItem {...testimonial} key={index} />
       ))}
