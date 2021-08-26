@@ -36,7 +36,7 @@ export const TestimonialsListItem: FunctionComponent<Testimonial> = ({
       </div>
       <div className="w-full flex flex-col justify-between">
           <p className="italic mb-3">{testimonial}</p>
-        <div className="flex flex-row justify-between">
+        <div className="flex md:flex-row flex-col justify-between">
           <p className="font-bold">
             <span>{name} - </span>
             <span>
