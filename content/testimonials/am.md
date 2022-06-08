@@ -1,6 +1,6 @@
 ---
 template: testimonials
-title: AM
+title: AM (Accepted)
 testimonial: "Kevin stood out among my peers as someone who was empathetic,
   intelligent and humble. Despite being successful in his time in McMaster
   University, he remained approachable, helping anyone who asked. On the eve of
