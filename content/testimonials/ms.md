@@ -1,6 +1,6 @@
 ---
 template: testimonials
-title: MS
+title: " MS (Accepted)"
 testimonial: "Affordable apps provided me with incredible service, and
   thoughtful and insightful feedback for preparing my medical school
   application. They helped me with listing activities, writing essays, and
