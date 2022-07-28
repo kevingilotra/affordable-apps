@@ -14,5 +14,5 @@ testimonial: Affordable Apps should be every pre-meds go-to for application hel
   looking for.  I highly recommend this program to anyone in this journey and is
   looking to strengthen their application with a second pair of eyes.
 rating: 5
-publishedDate: 2022-06-08T16:44:23.373Z
+publishedDate: 2022-03-02T17:00:44.393Z
 ---
