@@ -52,4 +52,5 @@ export const BlogPost: FunctionComponent<BlogPost> = ({
       </div>
     </Layout>
   );
+  
 };
